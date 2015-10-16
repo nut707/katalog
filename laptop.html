@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>
     <title>
       Ноутбуки
     </title>
-    <link href='/style/style.css' rel='stylesheet'>
     <script src='/js/jquery-2.1.4.js'></script>
-    <link href='/style/jquery-ui.min.css' rel='stylesheet'>
-    <script src='/js/jquery-ui.min.js'></script>
+    <script src='/jquery-ui-1.11.4.custom/jquery-ui.min.js'></script>
+    <link href='/jquery-ui-1.11.4.custom/jquery-ui.min.css' rel='stylesheet'>
+    <link href='/style/style.css' rel='stylesheet'>
   </head>
   <body class='page'>
     <div class='header'>
@@ -37,7 +38,7 @@
         <div class='sort__item sort__table'></div>
       </div>
     </div>
-    <div class='filter'>
+    <form class='filter'>
       <div class='filter__item filter__manufacturer'>
         <div class='filter__toggle'>
           <div class='filter__title'>
@@ -46,10 +47,18 @@
           <div class='filter__arrow'></div>
         </div>
         <div class='filter__body filter__body_show'>
-          <form action='#'>
-            <input id='test1' type='checkbox'>
-            <label for='test1'>Red</label>
-          </form>
+          <div class='checkbox'>
+            <input id='1' type='checkbox'>
+            <label for='1'>Acer</label>
+          </div>
+          <div class='checkbox'>
+            <input id='2' type='checkbox'>
+            <label for='2'>Asus</label>
+          </div>
+          <div class='checkbox'>
+            <input id='3' type='checkbox'>
+            <label for='3'>Hp</label>
+          </div>
         </div>
       </div>
       <div class='filter__item filter__price'>
@@ -59,7 +68,16 @@
           </div>
           <div class='filter__arrow'></div>
         </div>
-        <div class='filter__body'></div>
+        <div class='filter__body'>
+          <div class='slider'>
+            <div class='slider__price'></div>
+            <div class='slider-input'>
+              <input class='slider-input__min price-min' type='text'>
+              <span class='slider-input__divider'>&#8212</span>
+              <input class='slider-input__max price-max' type='text'>
+            </div>
+          </div>
+        </div>
       </div>
       <div class='filter__item filter__display-size'>
         <div class='filter__toggle'>
@@ -69,7 +87,16 @@
           </div>
           <div class='filter__arrow'></div>
         </div>
-        <div class='filter__body'></div>
+        <div class='filter__body'>
+          <div class='slider'>
+            <div class='slider__display-size'></div>
+            <div class='slider-input'>
+              <input class='slider-input__min display-size-min' type='text'>
+              <span class='slider-input__divider'>&#8212</span>
+              <input class='slider-input__min display-size-max' type='text'>
+            </div>
+          </div>
+        </div>
       </div>
       <div class='filter__item filter__ssd'>
         <div class='filter__toggle'>
@@ -78,7 +105,14 @@
           </div>
           <div class='filter__arrow'></div>
         </div>
-        <div class='filter__body'></div>
+        <div class='filter__body'>
+          <div class='radio'>
+            <input checked='checked' id='ssd_yes' name='ssd' type='radio'>
+            <label for='ssd_yes'>Есть</label>
+            <input id='ssd_no' name='ssd' type='radio'>
+            <label for='ssd_no'>Нет</label>
+          </div>
+        </div>
       </div>
       <div class='filter__item filter__ram'>
         <div class='filter__toggle'>
@@ -88,11 +122,18 @@
           </div>
           <div class='filter__arrow'></div>
         </div>
-        <div class='filter__body'></div>
+        <div class='filter__body'>
+          <div class='slider'>
+            <div class='slider__ram'></div>
+            <div class='slider-input'>
+              <input class='slider-input__min ram-min' type='text'>
+              <span class='slider-input__divider'>&#8212</span>
+              <input class='slider-input__min ram-max' type='text'>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <script>
-      $( "#date" ).datepicker();
-    </script>
+    </form>
+    <script src='/js/filter.js'></script>
   </body>
 </html>

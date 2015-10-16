@@ -1,12 +1,13 @@
-!!!
+﻿!!!
 %html
   %head
+    %meta{charset:"utf-8"}
     %title
       Ноутбуки
-    %link{rel:'stylesheet',href:'/style/style.css'}
     %script{src:'/js/jquery-2.1.4.js'}
-    %link{rel:'stylesheet',href:'/style/jquery-ui.min.css'}
-    %script{src:'/js/jquery-ui.min.js'}
+    %script{src:'/jquery-ui-1.11.4.custom/jquery-ui.min.js'}
+    %link{rel:'stylesheet',href:'/jquery-ui-1.11.4.custom/jquery-ui.min.css'}
+    %link{rel:'stylesheet',href:'/style/style.css'}
   %body.page
     .header
       .header__title
@@ -27,22 +28,34 @@
           В наличии
         .sort__item.sort__grid
         .sort__item.sort__table
-    .filter
+    %form.filter
       .filter__item.filter__manufacturer
         .filter__toggle
           .filter__title
             Производитель
           .filter__arrow
         .filter__body.filter__body_show
-          %form{:action => "#"}
-            %input#test1{:type => "checkbox"}/
-            %label{:for => "test1"} Red
+          .checkbox
+            %input#1{type: "checkbox"}
+            %label{for:"1"} Acer
+          .checkbox
+            %input#2{type: "checkbox"}
+            %label{for:"2"} Asus
+          .checkbox
+            %input#3{type: "checkbox"}
+            %label{for:"3"} Hp
       .filter__item.filter__price
         .filter__toggle
           .filter__title
             Цена, руб.
           .filter__arrow
         .filter__body
+          .slider
+            .slider__price
+            .slider-input
+              %input.slider-input__min.price-min{:type => "text"}
+              %span.slider-input__divider &#8212
+              %input.slider-input__max.price-max{:type => "text"}
       .filter__item.filter__display-size
         .filter__toggle
           .filter__title
@@ -50,12 +63,23 @@
             %br дюймы
           .filter__arrow
         .filter__body
+          .slider
+            .slider__display-size
+            .slider-input
+              %input.slider-input__min.display-size-min{:type => "text"}
+              %span.slider-input__divider &#8212
+              %input.slider-input__min.display-size-max{:type => "text"}
       .filter__item.filter__ssd
         .filter__toggle
           .filter__title
             Наличие SSD
           .filter__arrow
         .filter__body
+          .radio
+            %input#ssd_yes{type: "radio",name:'ssd',checked:'checked'}
+            %label{for: "ssd_yes"} Есть
+            %input#ssd_no{type: "radio",name:'ssd'}
+            %label{for: "ssd_no"} Нет
       .filter__item.filter__ram
         .filter__toggle
           .filter__title
@@ -63,7 +87,10 @@
             %br памяти
           .filter__arrow
         .filter__body
-
-
-    %script
-      $( "#date" ).datepicker();
+          .slider
+            .slider__ram
+            .slider-input
+              %input.slider-input__min.ram-min{:type => "text"}
+              %span.slider-input__divider &#8212
+              %input.slider-input__min.ram-max{:type => "text"}
+    %script{src:'/js/filter.js'}

@@ -1,12 +1,17 @@
 $grey: rgb(235, 235, 235);
 $blue: rgb(87, 114, 172);
+$dark-red: rgb(203, 72, 55);
+$dark-grey:rgb(238, 238, 238);
+$orange:rgb(251, 140, 0);
 .page{
   max-width: 1160px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px
+  font-size: 13px;
+  margin: 90px auto;
 }
 .header{
   position: relative;
+  border-bottom: 1px $grey solid;
 }
 .header__title{
   display: inline-block;
@@ -55,4 +60,101 @@ $blue: rgb(87, 114, 172);
   display: inline-block; 
   float: right;
 }
+//chekboxes
+.checkbox{
+  margin:10px 15px;
+}
 
+input[type="checkbox"]{
+    display:none;            
+}
+input[type="checkbox"] + label{
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+}
+input[type="checkbox"] + label:before{
+  content: '';
+  border: 1px $grey solid;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+input[type="checkbox"] + label:hover:before{
+  background-color: $dark-grey;
+}
+input[type="checkbox"] + label:after{
+  content: '✔';
+  position: absolute;
+  top: -4px; left: 1px;
+  font-size: 16px;
+  color: $dark-red;
+  transition: all .2s;
+  opacity: 0;
+  transform: scale(0);
+}
+input[type="checkbox"]:checked + label:after{
+  opacity: 1;
+  transform: scale(1);
+}
+//radio
+.radio{
+  margin:10px 15px;
+}
+input[type="radio"]{
+    display:none;
+}
+input[type="radio"] + label{
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+input[type="radio"] + label:before{
+  content: '';
+  border: 1px $grey solid;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  box-shadow: inset 0 2px 5px $grey
+}
+input[type="radio"] + label:after{
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: $orange;
+  top: 5px;
+  left:5px;
+  transition: all .2s;
+  opacity: 0;
+  transform: scale(0);
+}
+input[type="radio"]:checked + label:after{
+  opacity: 1;
+  transform: scale(1);
+}
+//slider
+.slider{
+  margin: 10px 15px 15px
+}
+.slider-input{
+  margin-top: 10px;
+  text-align: center;
+}
+.slider-input__divider{
+  margin: 0 5px;
+}
+.slider-input__min,.slider-input__max{
+  width: 70px;
+  height: 33px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px $grey solid;
+}
