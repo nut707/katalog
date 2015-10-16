@@ -1,17 +1,24 @@
 $grey: rgb(235, 235, 235);
 $blue: rgb(87, 114, 172);
 $dark-red: rgb(203, 72, 55);
-$dark-grey:rgb(238, 238, 238);
-$orange:rgb(251, 140, 0);
+$dark-grey: rgb(238, 238, 238);
+$very-dark-grey: #999999;
+$orange: rgb(251, 140, 0);
+$dark-green: rgb(100, 161, 67);
+$green: rgb(53, 158, 0);
+$light-green:rgb(193, 199, 16);
+
 .page{
   max-width: 1160px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   margin: 90px auto;
+  cursor: default;
 }
 .header{
   position: relative;
   border-bottom: 1px $grey solid;
+  margin-bottom: 20px;
 }
 .header__title{
   display: inline-block;
@@ -34,11 +41,18 @@ $orange:rgb(251, 140, 0);
   text-decoration: none;
 }
 
+//filter
 .filter {
+  display: inline-block;
   border: 1px $grey solid;
   border-bottom: none;
-  margin-top: 20px;
   width: 210px;
+}
+.filter__body{
+  display: none;
+}
+.filter__body_show{
+  display: block;
 }
 .filter__item{
   border-bottom: 1px $grey solid;
@@ -157,4 +171,107 @@ input[type="radio"]:checked + label:after{
   text-align: center;
   border-radius: 5px;
   border: 1px $grey solid;
+}
+
+
+//product
+.product{
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+.product__row{
+  padding-bottom: 40px;
+  border-bottom: 1px $grey solid;
+}
+.product__row-bot{
+  margin-top: 40px;
+}
+.product-item{
+  position: relative;
+  width: 177px;
+  display: inline-block;
+  &:not(:nth-child(1)){
+    margin-left: 60px;
+  }
+
+}
+.new-icon,.hit-icon{
+  margin-left: 4px;
+  vertical-align:middle;
+  top: -1px;
+  position: relative;
+}
+.product-item__new{
+  background: $green;
+  color:white;
+  border-radius: 2px;
+  width: 77px;
+  position: absolute;
+  top:24px;
+}
+.product-item__hit{
+  background: $light-green;
+  color:white;
+  border-radius: 2px;
+  width: 48px;
+  position: absolute;
+  top:44px;
+}
+
+.product-item__title{
+  color: $blue;
+  font-size: 15px;
+}
+.product-item__row{
+  margin: 5px 0;
+}
+.star-rate{
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  background: url('/img/laptop-star-rate-grey.png');
+  &:hover{
+    background: url('/img/laptop-star-rate-gold.png');
+  }
+}
+.product-item-price{
+  display: inline-block;
+}
+.product-item-price__old{
+  color: $very-dark-grey;
+  text-decoration: line-through;
+}
+.product-item-price__new{
+  font-size: 18px;
+}
+.product-item__add-to-cart{
+  display: inline-block;
+  float: right;
+}
+.add-to-cart{
+  width: 85px;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px $grey solid;
+}
+
+.product-item__total-review{
+  color: $blue;
+}
+.product-item__in-sctok{
+  color: $dark-green;
+  display: inline-block;
+  border-bottom: 1px $dark-green dotted;
+}
+.product-item-compare{
+  display: inline-block;
+  float: right;
+}
+.product-item-compare__text{
+  color: $blue;
+  border-bottom: 1px $blue dashed;
+  text-decoration: none;
+
 }

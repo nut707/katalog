@@ -1,3 +1,8 @@
+//filter open submenues
+$('.filter__toggle').click(function(event) {
+  $(this).next().slideToggle()
+});
+
 // price slider
 $('.slider__price').slider({
   max:20000,

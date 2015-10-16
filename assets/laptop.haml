@@ -27,7 +27,7 @@
         .sort__item.sort__in-stock
           В наличии
         .sort__item.sort__grid
-        .sort__item.sort__table
+        .sort__item.sort__row
     %form.filter
       .filter__item.filter__manufacturer
         .filter__toggle
@@ -93,4 +93,93 @@
               %input.slider-input__min.ram-min{:type => "text"}
               %span.slider-input__divider &#8212
               %input.slider-input__min.ram-max{:type => "text"}
+    .product
+      .product__row
+        .product-item
+          %img{src:'/img/laptop.png'}
+          .product-item__new
+            %img.new-icon{src:'/img/laptop-new-icon.png'}
+            Новинка
+          .product-item__hit
+            %img.hit-icon{src:'/img/laptop-hit-icon.png'}
+            Хит
+          .product-item__title
+            Ноутбук Acer Aspire E1-532-29572G50Mnkk
+          .product-item__row
+            .product-item__rate
+              -(1..5).each do
+                .star-rate
+            .product-item__total-review
+              Всего 31 отзыв
+          .product-item__row
+            .product-item-price
+              .product-item-price__old
+                57 530 р.
+              .product-item-price__new
+                16 800 р.
+            .product-item__add-to-cart
+              %form
+                %button.add-to-cart
+                  В корзину
+          .product-item__row
+            .product-item__in-sctok
+              В наличии
+            .product-item-compare
+              %img.product-item-compare__icon
+              %a.product-item-compare__text{href: '#'}Сравнить
+        -(1..3).each do
+          .product-item
+            %img{src:'/img/laptop.png'}
+            .product-item__title
+              Ноутбук Acer Aspire E1-532-29572G50Mnkk
+            .product-item__row
+              .product-item__rate
+                -(1..5).each do
+                  .star-rate
+              .product-item__total-review
+                Всего 31 отзыв
+            .product-item__row
+              .product-item-price
+                .product-item-price__old
+                  57 530 р.
+                .product-item-price__new
+                  16 800 р.
+              .product-item__add-to-cart
+                %form
+                  %button.add-to-cart
+                    В корзину
+            .product-item__row
+              .product-item__in-sctok
+                В наличии
+              .product-item-compare
+                %img.product-item-compare__icon
+                %a.product-item-compare__text{href: '#'}Сравнить
+      .product__row-bot
+        -(1..4).each do
+          .product-item
+            %img{src:'/img/laptop.png'}
+            .product-item__title
+              Ноутбук Acer Aspire E1-532-29572G50Mnkk
+            .product-item__row
+              .product-item__rate
+                -(1..5).each do
+                  .star-rate
+              .product-item__total-review
+                Всего 31 отзыв
+            .product-item__row
+              .product-item-price
+                .product-item-price__old
+                  57 530 р.
+                .product-item-price__new
+                  16 800 р.
+              .product-item__add-to-cart
+                %form
+                  %button.add-to-cart
+                    В корзину
+            .product-item__row
+              .product-item__in-sctok
+                В наличии
+              .product-item-compare
+                %img.product-item-compare__icon
+                %a.product-item-compare__text{href: '#'}Сравнить  
     %script{src:'/js/filter.js'}

@@ -4,11 +4,13 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   margin: 90px auto;
+  cursor: default;
 }
 
 .header {
   position: relative;
   border-bottom: 1px #ebebeb solid;
+  margin-bottom: 20px;
 }
 
 .header__title {
@@ -37,10 +39,18 @@
 }
 
 .filter {
+  display: inline-block;
   border: 1px #ebebeb solid;
   border-bottom: none;
-  margin-top: 20px;
   width: 210px;
+}
+
+.filter__body {
+  display: none;
+}
+
+.filter__body_show {
+  display: block;
 }
 
 .filter__item {
@@ -177,4 +187,121 @@ input[type="radio"]:checked + label:after {
   text-align: center;
   border-radius: 5px;
   border: 1px #ebebeb solid;
+}
+
+.product {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+
+.product__row {
+  padding-bottom: 40px;
+  border-bottom: 1px #ebebeb solid;
+}
+
+.product__row-bot {
+  margin-top: 40px;
+}
+
+.product-item {
+  position: relative;
+  width: 177px;
+  display: inline-block;
+}
+
+.product-item:not(:nth-child(1)) {
+  margin-left: 60px;
+}
+
+.new-icon, .hit-icon {
+  margin-left: 4px;
+  vertical-align: middle;
+  top: -1px;
+  position: relative;
+}
+
+.product-item__new {
+  background: #359e00;
+  color: white;
+  border-radius: 2px;
+  width: 77px;
+  position: absolute;
+  top: 24px;
+}
+
+.product-item__hit {
+  background: #c1c710;
+  color: white;
+  border-radius: 2px;
+  width: 48px;
+  position: absolute;
+  top: 44px;
+}
+
+.product-item__title {
+  color: #5772ac;
+  font-size: 15px;
+}
+
+.product-item__row {
+  margin: 5px 0;
+}
+
+.star-rate {
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  background: url("/img/laptop-star-rate-grey.png");
+}
+
+.star-rate:hover {
+  background: url("/img/laptop-star-rate-gold.png");
+}
+
+.product-item-price {
+  display: inline-block;
+}
+
+.product-item-price__old {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product-item-price__new {
+  font-size: 18px;
+}
+
+.product-item__add-to-cart {
+  display: inline-block;
+  float: right;
+}
+
+.add-to-cart {
+  width: 85px;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px #ebebeb solid;
+}
+
+.product-item__total-review {
+  color: #5772ac;
+}
+
+.product-item__in-sctok {
+  color: #64a143;
+  display: inline-block;
+  border-bottom: 1px #64a143 dotted;
+}
+
+.product-item-compare {
+  display: inline-block;
+  float: right;
+}
+
+.product-item-compare__text {
+  color: #5772ac;
+  border-bottom: 1px #5772ac dashed;
+  text-decoration: none;
 }
