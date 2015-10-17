@@ -36,7 +36,7 @@ $light-green:rgb(193, 199, 16);
 }
 .sort__item-active a{
   padding-right: 12px;
-  background: url(/img/laptop-sort-grey.png) no-repeat;
+  background: url(../img/laptop-sort-grey.png) no-repeat;
   background-position: 100% 50%;
 }
 .sort__title {
@@ -78,7 +78,7 @@ $light-green:rgb(193, 199, 16);
   border-radius: 100%;
   display: inline-block; 
   float: right;
-  background: url('/img/laptop-filter-toggle-arrow.png') no-repeat;
+  background: url(../img/laptop-filter-toggle-arrow.png) no-repeat;
   background-position: 50%;
   transform: rotate(-180deg);
   transition: .4s;
@@ -209,7 +209,7 @@ input[type="radio"]:checked + label:after{
   border: none;
 }
 .ui-widget-header{
-  background-image: url(/img/laptop-slider-background.png);
+  background-image: url(../img/laptop-slider-background.png);
 }
 
 
@@ -272,9 +272,9 @@ input[type="radio"]:checked + label:after{
   display: inline-block;
   width: 11px;
   height: 10px;
-  background: url('/img/laptop-star-rate-grey.png');
+  background: url(../img/laptop-star-rate-grey.png);
   &:hover{
-    background: url('/img/laptop-star-rate-gold.png');
+    background: url(../img/laptop-star-rate-gold.png);
   }
 }
 
