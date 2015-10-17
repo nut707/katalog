@@ -19,23 +19,25 @@
         <div class='sort__item sort__title'>
           Сортировка по:
         </div>
-        <div class='sort__item'>
+        <div class='sort__item sort__item-active'>
           <a class='sort__links' href='#'>цене</a>
-          <img>
         </div>
         <div class='sort__item'>
           <a class='sort__links' href='#'>рейтингу</a>
-          <img>
         </div>
         <div class='sort__item'>
           <a class='sort__links' href='#'>новинкам</a>
-          <img>
         </div>
         <div class='sort__item sort__in-stock'>
-          В наличии
+          <input id='in-stock' type='checkbox'>
+          <label for='in-stock'>В наличии</label>
         </div>
-        <div class='sort__item sort__grid'></div>
-        <div class='sort__item sort__row'></div>
+        <div class='sort__item sort__grid'>
+          <img src='/img/laptop-view-grid-grey.png'>
+        </div>
+        <div class='sort__item sort__row'>
+          <img src='/img/laptop-view-row-grey.png'>
+        </div>
       </div>
     </div>
     <form class='filter'>
@@ -44,7 +46,7 @@
           <div class='filter__title'>
             Производитель
           </div>
-          <div class='filter__arrow'></div>
+          <div class='filter__arrow filter__arrow-up'></div>
         </div>
         <div class='filter__body filter__body_show'>
           <div class='checkbox'>
@@ -158,7 +160,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -202,7 +204,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -246,7 +248,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -290,7 +292,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -336,7 +338,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -380,7 +382,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -424,7 +426,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -468,7 +470,7 @@
               <div class='star-rate'></div>
             </div>
             <div class='product-item__total-review'>
-              Всего 31 отзыв
+              <a class='product-item__total-review' href='#'>Всего 31 отзыв</a>
             </div>
           </div>
           <div class='product-item__row'>
@@ -498,6 +500,26 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class='pagination'>
+        <a class='pagination__item' href='#'>
+          1
+        </a>
+        <a class='pagination__item' href='#'>
+          2
+        </a>
+        <a class='pagination__item' href='#'>
+          3
+        </a>
+        <a class='pagination__item' href='#'>
+          4
+        </a>
+        <a class='pagination__item' href='#'>
+          5
+        </a>
+        <a class='pagination__item next-page' href='#'>
+          Следующая стр.→
+        </a>
       </div>
     </div>
     <script src='/js/filter.js'></script>

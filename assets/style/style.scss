@@ -1,8 +1,8 @@
-$grey: rgb(235, 235, 235);
+$grey: rgb(215, 215, 215);
+$dark-grey: rgb(148, 148, 148);
+$very-dark-grey: rgb(148,148,148);
 $blue: rgb(87, 114, 172);
 $dark-red: rgb(203, 72, 55);
-$dark-grey: rgb(238, 238, 238);
-$very-dark-grey: #999999;
 $orange: rgb(251, 140, 0);
 $dark-green: rgb(100, 161, 67);
 $green: rgb(53, 158, 0);
@@ -32,6 +32,12 @@ $light-green:rgb(193, 199, 16);
 }
 .sort__item{
   display: inline-block;
+  margin-right: 13px;
+}
+.sort__item-active a{
+  padding-right: 12px;
+  background: url(/img/laptop-sort-grey.png) no-repeat;
+  background-position: 100% 50%;
 }
 .sort__title {
   color: rgb(68, 68, 68);
@@ -40,6 +46,10 @@ $light-green:rgb(193, 199, 16);
   color: rgb(87, 114, 172);
   text-decoration: none;
 }
+.sort__grid,.sort__row{
+  cursor: pointer;
+}
+
 
 //filter
 .filter {
@@ -48,12 +58,7 @@ $light-green:rgb(193, 199, 16);
   border-bottom: none;
   width: 210px;
 }
-.filter__body{
-  display: none;
-}
-.filter__body_show{
-  display: block;
-}
+
 .filter__item{
   border-bottom: 1px $grey solid;
 }
@@ -73,6 +78,19 @@ $light-green:rgb(193, 199, 16);
   border-radius: 100%;
   display: inline-block; 
   float: right;
+  background: url('/img/laptop-filter-toggle-arrow.png') no-repeat;
+  background-position: 50%;
+  transform: rotate(-180deg);
+  transition: .4s;
+}
+.filter__arrow-up{
+  transform: rotate(-360deg);
+}
+.filter__body{
+  display: none;
+}
+.filter__body_show{
+  display: block;
 }
 //chekboxes
 .checkbox{
@@ -85,11 +103,12 @@ input[type="checkbox"]{
 input[type="checkbox"] + label{
   cursor: pointer;
   position: relative;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 input[type="checkbox"] + label:before{
   content: '';
   border: 1px $grey solid;
+  border-radius: 1.5px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -97,7 +116,7 @@ input[type="checkbox"] + label:before{
   left:0;
 }
 input[type="checkbox"] + label:hover:before{
-  background-color: $dark-grey;
+  background-color: $grey;
 }
 input[type="checkbox"] + label:after{
   content: '✔';
@@ -172,6 +191,26 @@ input[type="radio"]:checked + label:after{
   border-radius: 5px;
   border: 1px $grey solid;
 }
+//change jquery slider classes
+.ui-slider-horizontal .ui-slider-handle{
+  border-radius: 100%;
+  border: 2px $orange solid;
+  width: 6px;
+  height: 6px;
+  top:-0.2em;
+}
+.ui-slider-horizontal{
+  height: 4px;
+}
+
+.ui-widget-content{
+  background-color: $grey;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.09);
+  border: none;
+}
+.ui-widget-header{
+  background-image: url(/img/laptop-slider-background.png);
+}
 
 
 //product
@@ -226,6 +265,9 @@ input[type="radio"]:checked + label:after{
 .product-item__row{
   margin: 5px 0;
 }
+.product-item__rate{
+  display: inline-block;
+}
 .star-rate{
   display: inline-block;
   width: 11px;
@@ -234,6 +276,13 @@ input[type="radio"]:checked + label:after{
   &:hover{
     background: url('/img/laptop-star-rate-gold.png');
   }
+}
+
+.product-item__total-review{
+  color: $blue;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
 }
 .product-item-price{
   display: inline-block;
@@ -257,9 +306,6 @@ input[type="radio"]:checked + label:after{
   border: 1px $grey solid;
 }
 
-.product-item__total-review{
-  color: $blue;
-}
 .product-item__in-sctok{
   color: $dark-green;
   display: inline-block;
@@ -274,4 +320,35 @@ input[type="radio"]:checked + label:after{
   border-bottom: 1px $blue dashed;
   text-decoration: none;
 
+}
+
+//pagination
+.pagination{
+  margin-top: 40px;
+  border-right: none;
+}
+.pagination__item{
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-left: 1px $grey solid;
+  border-top: 1px $grey solid;
+  border-bottom: 1px $grey solid;
+  text-align: center;
+  padding-top: 12px;
+  text-decoration: none;
+  float: left;
+  color: $blue;
+  &:hover{
+    background: $grey;
+  }
+}
+
+.next-page{
+  width: auto;
+  border-right: 1px $grey solid;
+  padding-left: 20px;
+  padding-right: 15px;
 }

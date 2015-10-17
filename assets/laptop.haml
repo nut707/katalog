@@ -15,25 +15,25 @@
       .sort
         .sort__item.sort__title          
           Сортировка по:
-        .sort__item
-          %a.sort__links{href: '#'}цене
-          %img
+        .sort__item.sort__item-active
+          %a.sort__links{href: '#'}цене          
         .sort__item
           %a.sort__links{href: '#'}рейтингу
-          %img
         .sort__item
           %a.sort__links{href: '#'}новинкам
-          %img
         .sort__item.sort__in-stock
-          В наличии
+          %input#in-stock{type: "checkbox"}
+          %label{for:"in-stock"} В наличии
         .sort__item.sort__grid
+          %img{src:'/img/laptop-view-grid-grey.png'}
         .sort__item.sort__row
+          %img{src:'/img/laptop-view-row-grey.png'}
     %form.filter
       .filter__item.filter__manufacturer
         .filter__toggle
           .filter__title
             Производитель
-          .filter__arrow
+          .filter__arrow.filter__arrow-up
         .filter__body.filter__body_show
           .checkbox
             %input#1{type: "checkbox"}
@@ -110,7 +110,7 @@
               -(1..5).each do
                 .star-rate
             .product-item__total-review
-              Всего 31 отзыв
+              %a.product-item__total-review{href:'#'} Всего 31 отзыв
           .product-item__row
             .product-item-price
               .product-item-price__old
@@ -137,7 +137,7 @@
                 -(1..5).each do
                   .star-rate
               .product-item__total-review
-                Всего 31 отзыв
+                %a.product-item__total-review{href:'#'} Всего 31 отзыв
             .product-item__row
               .product-item-price
                 .product-item-price__old
@@ -165,7 +165,7 @@
                 -(1..5).each do
                   .star-rate
               .product-item__total-review
-                Всего 31 отзыв
+                %a.product-item__total-review{href:'#'} Всего 31 отзыв
             .product-item__row
               .product-item-price
                 .product-item-price__old
@@ -182,4 +182,10 @@
               .product-item-compare
                 %img.product-item-compare__icon
                 %a.product-item-compare__text{href: '#'}Сравнить  
+      .pagination
+        - (1..5).each do |i|
+          %a.pagination__item{href:'#'}
+            #{i}
+        %a.pagination__item.next-page{href:'#'}
+          Следующая стр.→
     %script{src:'/js/filter.js'}

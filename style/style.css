@@ -9,7 +9,7 @@
 
 .header {
   position: relative;
-  border-bottom: 1px #ebebeb solid;
+  border-bottom: 1px #d7d7d7 solid;
   margin-bottom: 20px;
 }
 
@@ -27,6 +27,13 @@
 
 .sort__item {
   display: inline-block;
+  margin-right: 13px;
+}
+
+.sort__item-active a {
+  padding-right: 12px;
+  background: url(/img/laptop-sort-grey.png) no-repeat;
+  background-position: 100% 50%;
 }
 
 .sort__title {
@@ -38,23 +45,19 @@
   text-decoration: none;
 }
 
+.sort__grid, .sort__row {
+  cursor: pointer;
+}
+
 .filter {
   display: inline-block;
-  border: 1px #ebebeb solid;
+  border: 1px #d7d7d7 solid;
   border-bottom: none;
   width: 210px;
 }
 
-.filter__body {
-  display: none;
-}
-
-.filter__body_show {
-  display: block;
-}
-
 .filter__item {
-  border-bottom: 1px #ebebeb solid;
+  border-bottom: 1px #d7d7d7 solid;
 }
 
 .filter__toggle {
@@ -71,10 +74,26 @@
 .filter__arrow {
   height: 16px;
   width: 16px;
-  border: 1px #ebebeb solid;
+  border: 1px #d7d7d7 solid;
   border-radius: 100%;
   display: inline-block;
   float: right;
+  background: url("/img/laptop-filter-toggle-arrow.png") no-repeat;
+  background-position: 50%;
+  transform: rotate(-180deg);
+  transition: .4s;
+}
+
+.filter__arrow-up {
+  transform: rotate(-360deg);
+}
+
+.filter__body {
+  display: none;
+}
+
+.filter__body_show {
+  display: block;
 }
 
 .checkbox {
@@ -88,12 +107,13 @@ input[type="checkbox"] {
 input[type="checkbox"] + label {
   cursor: pointer;
   position: relative;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
 input[type="checkbox"] + label:before {
   content: '';
-  border: 1px #ebebeb solid;
+  border: 1px #d7d7d7 solid;
+  border-radius: 1.5px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -102,7 +122,7 @@ input[type="checkbox"] + label:before {
 }
 
 input[type="checkbox"] + label:hover:before {
-  background-color: #eeeeee;
+  background-color: #d7d7d7;
 }
 
 input[type="checkbox"] + label:after {
@@ -139,14 +159,14 @@ input[type="radio"] + label {
 
 input[type="radio"] + label:before {
   content: '';
-  border: 1px #ebebeb solid;
+  border: 1px #d7d7d7 solid;
   width: 17px;
   height: 17px;
   border-radius: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: inset 0 2px 5px #ebebeb;
+  box-shadow: inset 0 2px 5px #d7d7d7;
 }
 
 input[type="radio"] + label:after {
@@ -186,7 +206,29 @@ input[type="radio"]:checked + label:after {
   height: 33px;
   text-align: center;
   border-radius: 5px;
-  border: 1px #ebebeb solid;
+  border: 1px #d7d7d7 solid;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  border-radius: 100%;
+  border: 2px #fb8c00 solid;
+  width: 6px;
+  height: 6px;
+  top: -0.2em;
+}
+
+.ui-slider-horizontal {
+  height: 4px;
+}
+
+.ui-widget-content {
+  background-color: #d7d7d7;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.09);
+  border: none;
+}
+
+.ui-widget-header {
+  background-image: url(/img/laptop-slider-background.png);
 }
 
 .product {
@@ -197,7 +239,7 @@ input[type="radio"]:checked + label:after {
 
 .product__row {
   padding-bottom: 40px;
-  border-bottom: 1px #ebebeb solid;
+  border-bottom: 1px #d7d7d7 solid;
 }
 
 .product__row-bot {
@@ -248,6 +290,10 @@ input[type="radio"]:checked + label:after {
   margin: 5px 0;
 }
 
+.product-item__rate {
+  display: inline-block;
+}
+
 .star-rate {
   display: inline-block;
   width: 11px;
@@ -259,12 +305,19 @@ input[type="radio"]:checked + label:after {
   background: url("/img/laptop-star-rate-gold.png");
 }
 
+.product-item__total-review {
+  color: #5772ac;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+}
+
 .product-item-price {
   display: inline-block;
 }
 
 .product-item-price__old {
-  color: #999999;
+  color: #949494;
   text-decoration: line-through;
 }
 
@@ -282,11 +335,7 @@ input[type="radio"]:checked + label:after {
   height: 35px;
   background: #fff;
   border-radius: 5px;
-  border: 1px #ebebeb solid;
-}
-
-.product-item__total-review {
-  color: #5772ac;
+  border: 1px #d7d7d7 solid;
 }
 
 .product-item__in-sctok {
@@ -304,4 +353,36 @@ input[type="radio"]:checked + label:after {
   color: #5772ac;
   border-bottom: 1px #5772ac dashed;
   text-decoration: none;
+}
+
+.pagination {
+  margin-top: 40px;
+  border-right: none;
+}
+
+.pagination__item {
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-left: 1px #d7d7d7 solid;
+  border-top: 1px #d7d7d7 solid;
+  border-bottom: 1px #d7d7d7 solid;
+  text-align: center;
+  padding-top: 12px;
+  text-decoration: none;
+  float: left;
+  color: #5772ac;
+}
+
+.pagination__item:hover {
+  background: #d7d7d7;
+}
+
+.next-page {
+  width: auto;
+  border-right: 1px #d7d7d7 solid;
+  padding-left: 20px;
+  padding-right: 15px;
 }

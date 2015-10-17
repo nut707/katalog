@@ -1,6 +1,7 @@
 //filter open submenues
 $('.filter__toggle').click(function(event) {
   $(this).next().slideToggle()
+  $(this).find('.filter__arrow').toggleClass('filter__arrow-up');
 });
 
 // price slider
