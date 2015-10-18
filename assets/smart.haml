@@ -1,0 +1,149 @@
+!!!
+%html
+  %head
+    %meta{charset:"utf-8"}
+    %title
+      Смартфоны
+    %script{src:'js/jquery-2.1.4.js'}
+    %script{src:'jquery-ui-1.11.4.custom/jquery-ui.min.js'}
+    %link{rel:'stylesheet',href:'jquery-ui-1.11.4.custom/jquery-ui.min.css'}
+    %link{rel:'stylesheet',href:'style/smart.css'}
+  %body.page
+    .filter
+      .filter__header
+        Фильтр товара
+      .filter__item.filter__manufacturer
+        .filter__toggle_always-opened
+          .filter__title
+            Производитель
+          .filter__help{title:'Подсказка'}
+            ?
+        .filter__body.filter__body_show
+          .checkbox-col
+            .checkbox
+              %input#samsung{type: "checkbox"}
+              %label{for:"samsung"} Samsung
+            .checkbox
+              %input#apple{type: "checkbox", checked:'checked'}
+              %label{for:"apple"} Apple
+            .checkbox
+              %input#lenovo{type: "checkbox"}
+              %label{for:"lenovo"} Lenovo
+            .checkbox
+              %input#explay{type: "checkbox"}
+              %label{for:"explay"} Explay
+          .checkbox-col
+            .checkbox
+              %input#sony{type: "checkbox"}
+              %label{for:"sony"} Sony
+            .checkbox
+              %input#Nokia{type: "checkbox"}
+              %label{for:"Nokia"} Nokia
+            .checkbox
+              %input#LG{type: "checkbox"}
+              %label{for:"LG"} LG
+            .checkbox
+              %input#Toshiba{type: "checkbox"}
+              %label{for:"Toshiba"} Toshiba
+          %a.show-all{href:'#'}Показать все
+      .filter__item.filter__price
+        .filter__toggle_always-opened
+          .filter__title
+            Цена, (р.)
+          .filter__help{title:'Подсказка'}
+            ?
+        .filter__body.filter__body_show
+          .slider
+            .slider-input
+              %input.slider-input__min.price-min{:type => "text"}
+              %span.slider-input__divider -
+              %input.slider-input__min.price-max{:type => "text"}
+            .slider__price-smart
+      .filter__item
+        .filter__toggle.filter__toggle_closed
+          .filter__title.filter__toggle_underline
+            Операционная система
+          .filter__help{title:'Подсказка'}
+            ?
+        .filter__body
+          .checkbox
+            %input#Android{type: "checkbox"}
+            %label{for:"Android"} Android
+          .checkbox
+            %input#IOS{type: "checkbox"}
+            %label{for:"IOS"} IOS
+      .filter__item.filter__amount-core
+        .filter__toggle
+          .filter__title.filter__toggle_underline
+            Количество ядер
+          .filter__help{title:'Подсказка'}
+            ?
+        .filter__body.filter__body_show
+          .checkbox-col
+            .checkbox
+              %input#1{type: "checkbox"}
+              %label{for:"1"} 1
+            .checkbox
+              %input#2{type: "checkbox"}
+              %label{for:"2"} 3
+          .checkbox-col
+            .checkbox
+              %input#3{type: "checkbox"}
+              %label{for:"3"} 2
+            .checkbox
+              %input#4{type: "checkbox", checked:'checked'}
+              %label{for:"4"} 4
+    .sort_price_wrapper
+      .sort
+        .sort__item.sort__title          
+          Сортировка по:
+        .sort__item
+          %a.sort__links{href: '#'}новинкам          
+        .sort__item
+          %a.sort__links{href: '#'}цене
+        .sort__item.sort__item-active
+          %a.sort__links{href: '#'}популярности
+        .sort__item.sort__in-stock
+          %input#in-stock{type: "checkbox", checked:'checked'}
+          %label{for:"in-stock"} В наличии
+      .product
+        -(1..2).each do
+          .product__row
+            .product-item
+              .product-item__title
+                Apple iPhone 5s 16Gb
+              %img{src:'img/smart.jpg'}
+              .product-item__new
+              .product-item__hit
+              .product-item__desc
+                GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
+              .product-item-price
+                24 990 р.
+              .product-item__row
+                .product-item__in-sctok
+                  Наличиие
+                .product-item__add-to-cart
+                  %form
+                    %button.add-to-cart
+                .product-item-compare
+                  %input#compare{type: "checkbox"}
+                  %label{for:"compare"} Сравнить
+            -(1..4).each do
+              .product-item
+                .product-item__title
+                  Apple iPhone 5s 16Gb
+                %img{src:'img/smart.jpg'}
+                .product-item__desc
+                  GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
+                .product-item-price
+                  24 990 р.
+                .product-item__row
+                  .product-item__in-sctok
+                    Наличиие
+                  .product-item__add-to-cart
+                    %form
+                      %button.add-to-cart
+                  .product-item-compare
+                    %input#compare{type: "checkbox"}
+                    %label{for:"compare"} Сравнить
+    %script{src:'js/filter.js'}

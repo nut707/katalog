@@ -1,10 +1,11 @@
 //filter open submenues
 $('.filter__toggle').click(function(event) {
   $(this).next().slideToggle()
-  $(this).find('.filter__arrow').toggleClass('filter__arrow-up');
+  $(this).find('.filter__arrow').toggleClass('filter__arrow-open');
+  $(this).toggleClass('filter__toggle_closed');
 });
 
-// price slider
+//laptop price slider
 $('.slider__price').slider({
   max:20000,
   min:6000,
@@ -22,7 +23,7 @@ $(".price-min,.price-max").change(function() {
   $(".slider__price").slider("option", "values", [ $('.price-min').val(), $('.price-max').val() ] );
 });
 
-// display slider
+//laptop display slider
 $('.slider__display-size').slider({
   max:26,
   min:11,
@@ -39,7 +40,7 @@ $(".display-size-min,.display-size-max").change(function() {
   $(".slider__display-size").slider("option", "values", [ $('.display-size-min').val(), $('.display-size-max').val() ] );
 });
 
-// ram slider
+//laptop ram slider
 $('.slider__ram').slider({
   max:4096,
   min:512,
@@ -54,4 +55,21 @@ $('.ram-min').val($( ".slider__ram" ).slider( "values", 0 )),
 $('.ram-max').val($( ".slider__ram" ).slider( "values", 1 )),
 $(".ram-min,.ram-max").change(function() {
   $(".slider__ram").slider("option", "values", [ $('.ram-min').val(), $('.ram-max').val() ] );
+});
+
+//smart price slider
+$('.slider__price-smart').slider({
+  max:129999,
+  min:1200,
+  range:true,
+  values: [ 1200, 78262 ],
+  slide: function(event,ui){
+    $('.price-min').val(ui.values[0]);
+    $('.price-max').val(ui.values[1]);
+  }
+});
+$('.price-min').val($( ".slider__price-smart" ).slider( "values", 0 )),
+$('.price-max').val($( ".slider__price-smart" ).slider( "values", 1 )),
+$(".price-min,.price-max").change(function() {
+  $(".slider__price").slider("option", "values", [ $('.price-min').val(), $('.price-max').val() ] );
 });
