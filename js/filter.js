@@ -68,8 +68,8 @@ $('.slider__price-smart').slider({
     $('.price-max').val(ui.values[1]);
   }
 });
-$('.price-min').val($( ".slider__price-smart" ).slider( "values", 0 )),
-$('.price-max').val($( ".slider__price-smart" ).slider( "values", 1 )),
+$('.smart-price-min').val($( ".slider__price-smart" ).slider( "values", 0 )),
+$('.smart-price-max').val($( ".slider__price-smart" ).slider( "values", 1 )),
 $(".price-min,.price-max").change(function() {
   $(".slider__price").slider("option", "values", [ $('.price-min').val(), $('.price-max').val() ] );
 });
