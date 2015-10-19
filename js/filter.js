@@ -64,12 +64,22 @@ $('.slider__price-smart').slider({
   range:true,
   values: [ 1200, 78262 ],
   slide: function(event,ui){
-    $('.price-min').val(ui.values[0]);
-    $('.price-max').val(ui.values[1]);
+    $('.smart-price-min').val(ui.values[0]);
+    $('.smart-price-max').val(ui.values[1]);
   }
 });
+
 $('.smart-price-min').val($( ".slider__price-smart" ).slider( "values", 0 )),
 $('.smart-price-max').val($( ".slider__price-smart" ).slider( "values", 1 )),
-$(".price-min,.price-max").change(function() {
-  $(".slider__price").slider("option", "values", [ $('.price-min').val(), $('.price-max').val() ] );
+$(".smart-price-min,.smart-price-max").change(function() {
+  $(".slider__price-smart").slider("option", "values", [ $('.smart-price-min').val(), $('.smart-price-max').val() ] );
 });
+
+var max = $( ".slider__price-smart" ).slider( "option", "max" );
+var min = $( ".slider__price-smart" ).slider( "option", "min" );
+
+$('.division__0').text(min)
+$('.division__25').text(Math.round((max-min)/4))
+$('.division__50').text(Math.round((max-min)/2))
+$('.division__75').text(Math.round((3*(max-min))/4))
+$('.division__100').text(max)
