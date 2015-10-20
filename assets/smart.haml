@@ -87,19 +87,19 @@
         .filter__body.filter__body_show
           .checkbox-col
             .checkbox
-              %input#1{type: "checkbox"}
-              %label{for:"1"} 1
+              %input#1_core{type: "checkbox"}
+              %label{for:"1_core"} 1
             .checkbox
-              %input#2{type: "checkbox"}
-              %label{for:"2"} 3
+              %input#2_core{type: "checkbox"}
+              %label{for:"2_core"} 3
           .checkbox-col
             .checkbox
-              %input#3{type: "checkbox"}
-              %label{for:"3"} 2
+              %input#3_core{type: "checkbox"}
+              %label{for:"3_core"} 2
             .checkbox
-              %input#4{type: "checkbox", checked:'checked'}
-              %label{for:"4"} 4
-    .sort_price_wrapper
+              %input#4_core{type: "checkbox", checked:'checked'}
+              %label{for:"4_core"} 4
+    .sort_product_wrapper
       .sort
         .sort__item.sort__title          
           Сортировка по:
@@ -113,43 +113,41 @@
           %input#in-stock{type: "checkbox", checked:'checked'}
           %label{for:"in-stock"} В наличии
       .product
-        -(1..2).each do
-          .product__row
-            .product-item
-              .product-item__title
-                Apple iPhone 5s 16Gb
-              %img{src:'img/smart.jpg'}
-              .product-item__new
-              .product-item__hit
-              .product-item__desc
-                GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
-              .product-item-price
-                24 990 р.
-              .product-item__row
-                .product-item__in-sctok
-                  Наличиие
-                .product-item__add-to-cart
-                  %form
-                    %button.add-to-cart
-                .product-item-compare
-                  %input#compare{type: "checkbox"}
-                  %label{for:"compare"} Сравнить
-            -(1..4).each do
-              .product-item
-                .product-item__title
-                  Apple iPhone 5s 16Gb
-                %img{src:'img/smart.jpg'}
-                .product-item__desc
-                  GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
-                .product-item-price
-                  24 990 р.
-                .product-item__row
-                  .product-item__in-sctok
-                    Наличиие
-                  .product-item__add-to-cart
-                    %form
-                      %button.add-to-cart
-                  .product-item-compare
-                    %input#compare{type: "checkbox"}
-                    %label{for:"compare"} Сравнить
+        .product-item
+          .product-item__title
+            Apple iPhone 5s 16Gb
+          %img{src:'img/smart.jpg'}
+          .product-item__new
+          .product-item__hit
+          .product-item__desc
+            GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
+          .product-item-price
+            24 990 р.
+          .product-item__row
+            .product-item__in-sctok
+              Наличиие
+            .product-item__add-to-cart
+              %form
+                %button.add-to-cart
+            .product-item-compare
+              %input#compare{type: "checkbox"}
+              %label{for:"compare"} Сравнить
+        -(1..9).each do |i|
+          .product-item
+            .product-item__title
+              Apple iPhone 5s 16Gb
+            %img{src:'img/smart.jpg'}
+            .product-item__desc
+              GSM, LTE, смартфон, iOS 7, вес 112 г, ШхВхТ 58.6x123.8x7.6 мм, экран 4", 61136, Bluetooth, Wi-Fi, GPS, ГЛОНАСС, фотокама..
+            .product-item-price
+              24 990 р.
+            .product-item__row
+              .product-item__in-sctok
+                Наличиие
+              .product-item__add-to-cart
+                %form
+                  %button.add-to-cart
+              .product-item-compare
+                %input{type: "checkbox",id:"compare_#{i}"}
+                %label{for:"compare_#{i}"} Сравнить
     %script{src:'js/filter.js'}

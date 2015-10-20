@@ -18,19 +18,20 @@
   font-size: 32px;
 }
 
-.sort_price_wrapper {
+.sort_product_wrapper {
   display: inline-block;
   vertical-align: top;
-  margin-left: 20px;
+  margin-left: 1%;
+  width: 82%;
 }
 
 .sort {
   background: #f8f8f8;
-  width: 100%;
+  max-width: 1300px;
   border-top: 1px #cacaca solid;
   border-bottom: 1px #cacaca solid;
   border-right: 1px #cacaca solid;
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 
 .sort__item {
@@ -62,7 +63,8 @@
   display: inline-block;
   border: 1px #cacaca solid;
   border-bottom: none;
-  width: 234px;
+  width: 14.5%;
+  margin: 0 0 1% 1%;
 }
 
 .filter__header {
@@ -110,6 +112,7 @@
   display: inline-block;
   position: absolute;
   right: 0;
+  top: 20px;
   padding: 1px 3px;
   color: #cacaca;
   border-left: 1px #cacaca dashed;
@@ -267,7 +270,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .slider-input__min, .slider-input__max {
-  width: 75px;
+  width: 35.5%;
   height: 30px;
   border: 1px #666666 solid;
   padding-left: 5px;
@@ -317,8 +320,8 @@ input[type="radio"]:checked + label:after {
 }
 
 .division {
-  color: #969696;
-  font-size: 11px;
+  color: #666666;
+  font-size: 0.7em;
   position: relative;
 }
 
