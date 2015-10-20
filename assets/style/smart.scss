@@ -26,18 +26,19 @@ $green: #339900;
   display: inline-block;
   font-size: 32px;
 }
-.sort_price_wrapper{
+.sort_product_wrapper{
   display: inline-block;
   vertical-align: top;
-  margin-left: 20px;
+  margin-left: 1%;
+  width: 82%;
 }
 .sort{
   background: $grey;
-  width: 100%;
+  max-width: 1300px;
   border-top: 1px $dark-grey solid;
   border-bottom: 1px $dark-grey solid;
   border-right: 1px $dark-grey solid;
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 .sort__item{
   padding: 10px;
@@ -66,7 +67,8 @@ $green: #339900;
   display: inline-block;
   border: 1px $dark-grey solid;
   border-bottom: none;
-  width: 234px;
+  width: 14.5%;
+  margin: 0 0 1% 1%;
 }
 .filter__header{
   padding: 10px 15px 15px;
@@ -106,6 +108,7 @@ $green: #339900;
   display: inline-block;
   position: absolute;
   right: 0;
+  top: 20px;
   padding: 1px 3px;
   color: $dark-grey;
   border-left: 1px $dark-grey dashed;
@@ -244,7 +247,7 @@ input[type="radio"]:checked + label:after{
   margin: 0 5px;
 }
 .slider-input__min,.slider-input__max{
-  width: 75px;
+  width: 35.5%;
   height: 30px;
   border: 1px $darkest-grey solid;
   padding-left: 5px;
@@ -289,8 +292,8 @@ input[type="radio"]:checked + label:after{
 }
 //slider diviosions
 .division{
-  color: $grey150;
-  font-size: 11px;
+  color: $darkest-grey;
+  font-size: 0.7em;
   position: relative;
   div{
     display: inline-block;
